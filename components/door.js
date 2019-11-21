@@ -1,5 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Haiku from './haiku.js';
 
 class Door extends Component {
 
@@ -24,15 +26,20 @@ class Door extends Component {
     // if the door is opening, increase the progress, if it is closing, decrease
     if (!this.state.open) {
       this.props.updateProgress(id);
+      
+
     } else {
       this.props.updateProgress(parseInt(id) - 1);
     }
+    
 
   }
 
   render() {
     return (
       <div className="door">
+        <div className="haiku"><span className="haikuSpan">{this.props.haiku}</span>
+        </div>
         <div
           className={`door__frame ${this.props.activeDoor && !this.state.open ? "door__frame--active" : ""}`}>
           <this.props.image width={70} height={90} />

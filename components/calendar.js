@@ -3,6 +3,8 @@ import { Component } from 'react';
 import Door from './door.js';
 import ProgressBar from './progress-bar.js';
 import doors from '../public/images/list.js';
+
+
 class Calendar extends Component {
 
   constructor() {
@@ -28,6 +30,7 @@ class Calendar extends Component {
         <Door
           id={door.id}
           image={door.image}
+          haiku={door.haiku}
           key={`door${door.id}`}
           updateProgress={this.handleUpdateProgress.bind(this)}
           /* we want to be able to open the door if it is active, and close it if the next door is active */

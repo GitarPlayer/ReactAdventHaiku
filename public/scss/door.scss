@@ -39,6 +39,7 @@ $module: '.door';
 
       &--open {
         transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+        
       }
 
       &__handle {
