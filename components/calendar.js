@@ -4,6 +4,7 @@ import Door from './door.js';
 import ProgressBar from './progress-bar.js';
 import doors from '../public/images/list.js';
 
+var dd = new Date().getDate();
 
 class Calendar extends Component {
 
@@ -12,7 +13,7 @@ class Calendar extends Component {
 
     this.state = {
       progress: 0,
-      activeDoor: 1
+      activeDoor: dd + 1
     }
   }
 

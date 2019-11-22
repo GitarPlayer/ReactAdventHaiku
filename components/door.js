@@ -4,6 +4,20 @@ import ReactDOM from 'react-dom';
 
 
 
+// var i = 0;
+
+// function typeWriter(txt) {
+//   var speed = 50;
+//   if (i < txt.length) {
+//     document.getElementById("typedtext").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter(txt), speed);
+//   }
+// }
+
+
+
+
 
 
 
@@ -35,16 +49,20 @@ class Door extends Component {
     if (!this.state.open) {
       this.props.updateProgress(id);
       document.getElementsByClassName(id)[0].style.display = 'flex';
-
+      // var i = 0;
+      // typeWriter(this.props.haiku);
 
       // Detect all clicks on the document
       document.addEventListener("click", function (event) {
         // If user clicks inside the element, do nothing
+        if (event.target.id == 'typedtext') {
+          return;
+        } else {
+          // If user clicks outside the element, hide it!
+          document.getElementsByClassName(id)[0].style.display = 'none';
+        }
 
-        if (event.target.closest(".id")) return;
 
-        // If user clicks outside the element, hide it!
-        var hideMe = document.getElementsByClassName(id)[0].style.display = 'none';
 
       });
 
