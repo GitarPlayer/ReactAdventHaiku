@@ -1,7 +1,13 @@
 import React from 'react';
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Haiku from './haiku.js';
+
+
+
+
+
+
+
 
 class Door extends Component {
 
@@ -12,6 +18,8 @@ class Door extends Component {
       open: false
     }
   }
+
+
 
   toggleDoor(id) {
 
@@ -26,19 +34,36 @@ class Door extends Component {
     // if the door is opening, increase the progress, if it is closing, decrease
     if (!this.state.open) {
       this.props.updateProgress(id);
-      
+      document.getElementsByClassName(id)[0].style.display = 'flex';
+
+
+      // Detect all clicks on the document
+      document.addEventListener("click", function (event) {
+        // If user clicks inside the element, do nothing
+
+        if (event.target.closest(".id")) return;
+
+        // If user clicks outside the element, hide it!
+        var hideMe = document.getElementsByClassName(id)[0].style.display = 'none';
+
+      });
+
+
+
 
     } else {
       this.props.updateProgress(parseInt(id) - 1);
+      document.getElementsByClassName(id)[0].style.display = 'none';
     }
-    
+
 
   }
+
 
   render() {
     return (
       <div className="door">
-        <div className="haiku"><span className="haikuSpan">{this.props.haiku}</span>
+        <div className={['haiku', this.props.id].join(' ')} id="typedtext">{this.props.haiku}
         </div>
         <div
           className={`door__frame ${this.props.activeDoor && !this.state.open ? "door__frame--active" : ""}`}>
@@ -50,7 +75,9 @@ class Door extends Component {
             <div className="door__frame__door__hinge top"></div>
             <div className="door__frame__door__hinge bottom"></div>
             <div className="door__frame__door__number">
+
               <p>{this.props.id}</p>
+
             </div>
           </div>
         </div>
