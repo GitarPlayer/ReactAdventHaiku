@@ -1,0 +1,87 @@
+$module: '.door';
+
+#{$module} {
+
+  display: inline-block;
+  margin: 15px 15px;
+
+  &__frame {
+    background-color: #6ab592;
+    position: relative;
+    width: 70px;
+    height: 90px;
+    margin: 0 auto;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 1px 1px 0px 0px #553925;
+    padding: 10px;
+
+    &--active {
+      box-shadow: 1px 1px 20px 9px #ffffff;
+    }
+
+    &__door {
+      background-color: #fa7474;
+      border-radius: 0 5px 5px 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 70px;
+      height: 90px;
+      display: flex;
+      justify-content: flex-end;
+      transform-origin: left;
+      transition: all 0.5s ease-in-out;
+      padding: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &--open {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+        
+      }
+
+      &__handle {
+        width: 10px;
+        height: 10px;
+        border-radius: 25px;
+        background-color: #b97d3a;
+        margin: auto 3px auto auto;
+        box-shadow: 1px 1px 0px 0px #2b0b0b;
+      }
+
+      &__hinge {
+        width: 5px;
+        background: #afafaf;
+        height: 20px;
+        position: absolute;
+        box-shadow: 1px 1px 1px 0px #484747;
+        left: -1px;
+
+        &.top {
+          top: 20px;
+        }
+
+        &.bottom {
+          bottom: 20px;
+        }
+
+      }
+
+      &__number {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin-left: 10px;
+
+        p {
+          font-size: 25px;
+          color: #ffffff;
+        }
+      }
+
+    }
+  }
+
+}

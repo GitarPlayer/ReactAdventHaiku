@@ -1,0 +1,21 @@
+$module: '.progress-bar';
+
+#{$module} {
+
+  background: #dcdfe2;;
+  margin: 0 0 10px;
+
+  &__bar {
+    margin-top: 100px;
+    background: red;
+    height: 20px;
+    transition: width 0.5s ease-in-out;
+
+    &__sleigh {
+      text-align: right;
+      position: relative;
+      top: -93px;
+    }
+  }
+
+}
