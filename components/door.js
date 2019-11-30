@@ -68,9 +68,7 @@ class Door extends Component {
 						options={{
 							strings: this.props.haiku,
 							autoStart: true,
-							loop: true,
-							pauseFor: 1000000,
-							changeDeleteSpeed: 1
+							loop: true
 						}}
 					/>
 				</div>

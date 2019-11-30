@@ -1,40 +1,43 @@
 {
-  "name": "react-advent-calendar",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nattydodd/react-advent-calendar.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nattydodd/react-advent-calendar/issues"
-  },
-  "homepage": "https://github.com/nattydodd/react-advent-calendar#readme",
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "express": "^4.16.2",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "webpack": "^3.8.1",
-    "webpack-dev-middleware": "^1.12.0"
-  },
-  "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.7.1",
-    "nodemon": "^1.12.1",
-    "react-svg-loader": "^2.1.0"
-  }
+	"name": "react-advent-calendar",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"homepage": "https://github.com/GitarPlayer/ReactAdventHaiku",
+	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"compile": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build-css": "node-sass --include-path scss public/scss/style.scss public/css/style.css",
+		"watch-css": "nodemon -e scss -x \"npm run build-css\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nattydodd/react-advent-calendar.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nattydodd/react-advent-calendar/issues"
+	},
+	"homepage": "https://github.com/nattydodd/react-advent-calendar#readme",
+	"dependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-latest": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"express": "^4.16.2",
+		"react": "^16.1.1",
+		"react-dom": "^16.1.1",
+		"webpack": "^3.8.1",
+		"webpack-dev-middleware": "^1.12.0"
+	},
+	"devDependencies": {
+		"babel-preset-env": "^1.6.1",
+		"node-sass": "^4.7.1",
+		"nodemon": "^1.12.1",
+		"react-svg-loader": "^2.1.0"
+	}
 }
