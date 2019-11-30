@@ -9,8 +9,10 @@ const doors = (() => {
 		{
 			id: 1,
 			image: Snowman,
-			haiku: `There are only 1 types of people in the world
-        Those who understand binary, and those who don't`
+			haiku: new Array(
+				'There are only 2 types of people in the world:',
+				"Those who understand binary, and those who don't"
+			)
 		},
 		{
 			id: 2,
@@ -25,7 +27,8 @@ const doors = (() => {
 			image: Yule,
 			haiku: new Array(
 				'There are only 3 types of people in the world:',
-				"Those who understand binary, and those who don't"
+				'Those who understand binary,',
+				"and those who don't"
 			)
 		},
 		{

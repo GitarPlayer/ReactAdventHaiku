@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Typewriter from 'typewriter-effect';
 
 class Door extends Component {
 	constructor(props) {
@@ -62,7 +63,16 @@ class Door extends Component {
 		return (
 			<div className="door">
 				<div className={[ 'haiku', this.props.id ].join(' ')} id="typedtext">
-					{this.props.haiku}
+					{/* {this.props.haiku} */}
+					<Typewriter
+						options={{
+							strings: this.props.haiku,
+							autoStart: true,
+							loop: true,
+							pauseFor: 1000000,
+							changeDeleteSpeed: 1
+						}}
+					/>
 				</div>
 				<div
 					className={`door__frame ${this.props.activeDoor && !this.state.open ? 'door__frame--active' : ''}`}
