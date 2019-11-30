@@ -5,21 +5,21 @@ import ProgressBar from './progress-bar.js';
 import doors from '../public/images/list.js';
 
 // var dd = new Date().getDate();
-let dd = 23;
+let dd = 1;
 class Calendar extends Component {
 	constructor() {
 		super();
 
 		this.state = {
 			progress: 0,
-			activeDoor: 23
+			activeDoor: 1
 		};
 	}
 
 	handleUpdateProgress(newProgress) {
 		let percentage = newProgress / 25 * 100;
 		this.setState({
-		// if the door is opening, increase the progress, if it is closing, decrease
+			// if the door is opening, increase the progress, if it is closing, decrease
 			progress: percentage
 		});
 	}
