@@ -18,7 +18,7 @@
 		"babel-loader": "^7.1.2",
 		"babel-preset-latest": "^6.24.1",
 		"babel-preset-react": "^6.24.1",
-		"express": "^4.16.2",
+		"express": "^4.17.3",
 		"react": "^16.1.1",
 		"react-dom": "^16.1.1",
 		"typewriter-effect": "^2.12.1",
